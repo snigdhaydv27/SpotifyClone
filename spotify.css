@@ -16,8 +16,7 @@ body{
 }
 .right {
   width: 75vw;
-}
-.home {
+  position: relative;
 }
 .home ul li {
   display: flex;
@@ -129,4 +128,16 @@ body{
 }
 .loginbtn:hover{
   font-size: 17px;
+ }
+ .playbar{
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(4, 81, 44);
+  width: 95%;
+  padding: 10px;
+ }
+ .songbuttons{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
  }
