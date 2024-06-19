@@ -30,3 +30,25 @@
 .p-1{
     padding: 10px;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333; /* Dark grey */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555; /* Grey */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Light grey */
+  }
+  
