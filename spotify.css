@@ -50,6 +50,7 @@ body{
   gap: 12px;
   position: absolute;
   bottom: 0;
+  padding: 10px 0;
 }
 .footer a{
   color: gray;
@@ -64,3 +65,33 @@ body{
 .header > *{
   padding: 8px;
 }
+.spotifyPlaylists{
+  padding: 16px;
+}
+.cardContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card{
+  width: 145px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.card > *{
+    padding-top: 10px;
+}
+.card img{
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.play{
+  position: absolute;
+  top: 128px;
+  right: 17px;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
