@@ -1,24 +1,33 @@
 async function getSongs(){
-let a = await fetch("http://127.0.0.1:5500/Spotifyclone/song/")
+let a = await fetch("http://127.0.0.1:5500/Spotifyclone/songs/")
 let response = await a.text();
 console.log(response)
 let div = document.createElement("div")
 div.innerHTML = response;
 let as = div.getElementsByTagName("a")
-let song = []
+let songs = []
 for(let index = 0; index < as.length; index++){
     const element = as[index];
     if(element.href.endsWith(".mp3")){
-        song.push(element.href)
+        songs.push(element.href.split("/songs/")[1])
     }
 }
- return song 
+ return songs 
 }
 
 async function main(){
-    let song = await getSongs()
-    var audio = new Audio(song[0]);
+    let songs = await getSongs();
+    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
+    for (const song of songs){
+        songUL.innerHTML = songUL.innerHTML + `<li> ${song.replaceAll("%20", " ")} </li>`;
+    }
+    var audio = new Audio(songs[0]);
     audio.play();
+
+    // audioElement.addEventListener("loadeddata", () => {
+    //     let duration = audio.duration;
+    //   });
+
 
 }
 main()
