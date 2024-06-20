@@ -1,6 +1,10 @@
 let currentSong = new Audio();
+let songs ;
 
 function secondsToMinutesSeconds(seconds) {
+    if (isNaN(seconds) || seconds < 0){
+        return "00:00";
+    }
   var minutes = Math.floor(seconds / 60);
   var remainingSeconds = seconds % 60;
   return (
@@ -99,6 +103,20 @@ async function main() {
    document.querySelector(".close").addEventListener("click", ()=>{
     document.querySelector(".left").style.left ="-120%"
  })
+
+     previous.addEventListener("click", ()=>{
+        currentSong.pause()
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        if((index-1) >= 0)
+       playMusic(songs[index-1])
+     })
+
+     next.addEventListener("click", ()=>{
+        currentSong.pause()
+         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+         if((index+1) < (songs.length))
+        playMusic(songs[index+1])
+     })
 
 }
 main();

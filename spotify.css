@@ -15,7 +15,7 @@ body{
   padding: 10px;
 }
 .right {
-  width: 75vw;
+  width: 72vw;
   position: relative;
 }
 .home ul li {
@@ -145,14 +145,24 @@ body{
   position: fixed;
   bottom: 30px;
   /* background-color: black; */
-  width: 70vw;
+  width:69.5vw;
   padding: 10px;
   height: 40px;
+ }
+ .songinfo{
+  width: 250px;
+  height: 20px;
+  padding: 0 12px;
+ }
+ .songtime{
+  width: 100px;
+  padding: 0 12px;
  }
  .songbuttons{
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
+  
  }
  .songbuttons img{
    cursor: pointer;
@@ -194,8 +204,9 @@ body{
   bottom: 0;
   margin: 6px 0;
   height: 4px;
-  width: 70vw;
+  width: 69.5vw;
   background-color: white;
+  border-radius: 5px;
 
 }
 .circle{
@@ -237,9 +248,22 @@ body{
     width: 90vw;
   }
   .seekbar{
-    width: 95vw;
+    width: 90vw;
   }
   .hamburger{
     display: block;
   }
+  .cardContainer{
+    justify-content: center;
+    margin: 0;
+  }
+  .songinfo{
+    width: auto;
+    height: 20px;
+    padding: 0 12px;
+   }
+   .songtime{
+    width: auto;
+    padding: 0 12px;
+   }
 }
