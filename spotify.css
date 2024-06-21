@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+:root{
+  --a:0;
+}
 * {
   margin: 0;
   padding: 0;
@@ -104,10 +106,15 @@ body{
 }
 .play{
   position: absolute;
-  top: 128px;
+  top: 110px;
   right: 17px;
-  opacity: 0;
+  opacity: var(--a);
   transition: all 1s ease-out;
+}
+.card:hover{
+  background-color:black;
+  width: 147px;
+  --a:1;
 }
 .buttons > *{
   margin: 0 12px;
