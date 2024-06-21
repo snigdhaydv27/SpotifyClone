@@ -150,13 +150,27 @@ body{
   height: 40px;
  }
  .songinfo{
-  width: 250px;
+  width: 175px;
   height: 20px;
   padding: 0 12px;
  }
  .songtime{
   width: 100px;
   padding: 0 12px;
+ }
+ .volume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+ }
+ .range input{
+  width: 80px;
+ }
+ .timeVol{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
  }
  .songbuttons{
   display: flex;
@@ -247,6 +261,9 @@ body{
   .playbar{
     width: 90vw;
   }
+  .abovebar{
+    margin-top: 10px;
+  }
   .seekbar{
     width: 90vw;
   }
@@ -257,13 +274,30 @@ body{
     justify-content: center;
     margin: 0;
   }
+  #previous{
+    width:24px ;
+  }
+  #play{
+    width:24px ;
+  }
+  #next{
+    width:24px ;
+  }
+  #volume{
+    width: 15px;
+  }
   .songinfo{
-    width: auto;
+    font-size: 8px;
+    width: 80px;
     height: 20px;
     padding: 0 12px;
    }
    .songtime{
-    width: auto;
+    font-size: 8px;
+    width: 49px;
     padding: 0 12px;
+   }
+   .range input{
+    width: 40px;
    }
 }
